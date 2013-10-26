@@ -1,0 +1,4 @@
+petanque
+========
+
+Tournoi pétanque CMP
