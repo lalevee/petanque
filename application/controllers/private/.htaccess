@@ -1,0 +1,4 @@
+AuthName "Administration du tournoi"
+AuthType Basic
+AuthUserFile "/.htpasswd"
+Require valid-user
