@@ -36,7 +36,5 @@
   <br>
   <h5><?php echo anchor_popup('private/admin', 'Accès admin') ?></h5>
   <br><br>
-  <img src="/images/10anscmp.jpg" alt="Le CMP a 10 ans !" width="180" />
-  <br><br>
 </div>
 

@@ -51,7 +51,7 @@ Les seuls points comptabilisés sont ceux donnés par des boules mieux placées 
 
 <p>Tout match non effectué avant la date indiquée conduira au forfait d'une équipe par tirage au sort.</p>
 
-<p> La finale et la consolante seront organisées lors de la journée de la recherche le 20 juin.</p>
+<p> La finale et la consolante seront organisées lors de la journée de la recherche.</p>
 
 <h2>Réclamations, litiges...</h2>
 

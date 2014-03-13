@@ -6,7 +6,7 @@ href="mailto:lalevee@emse.fr">Philippe Lalevée</a>, pour les besoins du
 tournoi de pétanque du site Georges Charpak.</p>
 
 <p>Les sources sont accessibles sur <a
-href="https://github.com/lalevee/tournoi-petanque">github</a>, pour un
+href="https://github.com/lalevee/petanque">github</a>, pour un
 usage sans modération, à la condition que la contribution de l'auteur
 soit mentionnée.</p>
 
