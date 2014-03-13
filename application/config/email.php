@@ -16,9 +16,8 @@
 // --------------------------------------------------------------------------
 
 $config['protocol']  = 'smtp';
-$config['smtp_host'] = 'mincen.emse.fr';
-$config['smtp_user'] = 'AChangerNM';
-$config['smtp_pass'] = 'AChangerPM';
+$config['smtp_host'] = 'sambacmp.emse.fr';
+$config['smtp_user'] = 'noreply';
 
 // --------------------------------------------------------------------------
 
