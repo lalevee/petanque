@@ -2,7 +2,7 @@
 <head>
 <title>Inscription d'une équipe</title>
 <meta content="text/html; charset=UTF-8" http-equiv="content-type">
-<link rel="stylesheet" type="text/css" href="css/style_adm.css" />
+<link rel="stylesheet" type="text/css" href="/css/style_adm.css" />
 </head>
 <body>
 
