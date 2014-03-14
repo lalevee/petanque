@@ -8,6 +8,21 @@ class Configuration extends CI_Model {
     var $c_tour    = 0;
     var $c_ieme    = 0;
 
+/* Les états
+   - INI: Mise en place du site
+   - INS: Phase d'inscription
+   - EXP: Phase de tournoi
+   - FIN: Tournoi terminé (résultats)
+   - ZZZ: Tournoi en sommeil
+
+   Les transitions
+   - ZZZ -> INI: modification configuration, initialisation de la base
+   - INI -> INS: none
+   - INS -> EXO: validation des équipes, initialisation du tournoi
+                 (arbre)
+   - EXP -> FIN:
+   - FIN -> ZZZ: passage de la base en archives
+*/
     public function __construct() {
       parent::__construct();
     }
