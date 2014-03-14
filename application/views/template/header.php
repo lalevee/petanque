@@ -4,7 +4,8 @@
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
   <title>Tournoi Pierre Petit de pétanque</title>
   <meta name="author" content="Philippe Lalevée">
-  <link rel="stylesheet" type="text/css" href="/styles/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="css/cupertino/jquery-ui-1.10.4.custom.css" />
   <style type="text/css">
     body {
       padding-top: 20px;
@@ -12,6 +13,7 @@
   </style>
   <link rel="shortcut icon" href="/images/favicon.ico">
   <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
 </head>
 <body>
 
