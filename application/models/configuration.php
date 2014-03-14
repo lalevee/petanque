@@ -32,14 +32,18 @@ class Configuration extends CI_Model {
       return $query->result(); 
     }
     
+    public function get_etat() {
+        $query = $this->get_config();
+        return $query[0]->c_etat;
+    }
+
     public function set_config($config) {
       $this->db->update('Configuration', $config);
     }
 
     public function inscription_closed() {
-        $query = $this->get_config();
-        $conf = $query[0];
-        return ($conf->c_etat != 'INS');
+        $etat = $this->get_etat();
+        return ($etat != 'INS');
     }
     
     public function phase_inscription() {

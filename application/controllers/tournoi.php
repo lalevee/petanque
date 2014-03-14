@@ -28,7 +28,8 @@ class Tournoi extends CI_Controller {
   }
   
   public function inscription()  {
-  	$data['closed'] = $this->Configuration->inscription_closed();
+    $data['closed'] = $this->Configuration->inscription_closed();
+    $data['etat'] = $this->Configuration->get_etat();
     $this->load->view('template/header');
     $this->load->view('inscription/joueur', $data);
     $this->load->view('template/footer');

@@ -23,7 +23,7 @@
   <li>
   <?php echo $row;?>
   </li>
-<? endforeach;?>
+<?php endforeach;?>
 </ul>
 
 <p>Retour à la page d'<?php echo anchor('admin', 'accueil') ?></p>
