@@ -219,6 +219,11 @@ class Tournoi extends CI_Controller {
     $this->load->view('template/footer');
   }
   
+  public function archive($annee) {
+      $this->load->view('template/header');
+      $this->load->view('template/footer');
+  }
+
   public function credits() {
     $this->load->view('template/header');
     $this->load->view('credits');
