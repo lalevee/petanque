@@ -11,6 +11,7 @@
     }
   </style>
   <link rel="shortcut icon" href="/images/favicon.ico">
+  <script type="text/javascript" src="js/jquery-1.4.2.js"></script>
 </head>
 <body>
 
