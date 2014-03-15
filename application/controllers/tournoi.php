@@ -9,13 +9,21 @@ class Tournoi extends CI_Controller {
         parent::__construct();
     }
 
-    private function tourToString($tour) {
+    private function _tourToString($tour) {
         $texte = array(
             '1' => 'huitième de finale',
             '2' => 'quart de finale',
             '3' => 'demi-finale',
             '4' => 'finale');
         return $texte[$tour];
+    }
+
+    /* Gestion de la page d'accueil par défaut */
+    
+    public function index() {
+        $this->load->view('template/header');
+        $this->accueil();
+        $this->load->view('template/footer');
     }
 
     public function accueil() {
@@ -29,12 +37,8 @@ class Tournoi extends CI_Controller {
         $this->load->view('accueil', $data);
     }
 
-    public function index() {
-        $this->load->view('template/header');
-        $this->accueil();
-        $this->load->view('template/footer');
-    }
-
+    /* Gestion des inscriptions */
+    
     public function inscription() {
         $data['closed'] = $this->Configuration->inscription_closed();
         $data['etat'] = $this->Configuration->get_etat();
@@ -64,6 +68,8 @@ class Tournoi extends CI_Controller {
             $this->load->view('template/footer');
         }
     }
+    
+    /* Affichage des listes */
 
     public function les_joueurs() {
         $data['query'] = $this->Joueur->get_joueurs();
@@ -103,6 +109,7 @@ class Tournoi extends CI_Controller {
             $data['date_tour'] = $tmp[$tour];
         } else
             $data['date_tour'] = '20 juin';
+        
         $rencontres = $this->Rencontre->get_rencontres_a_jouer_consol();
         $liste = array();
         foreach ($rencontres as $m) {
@@ -148,7 +155,7 @@ class Tournoi extends CI_Controller {
                 $s_e1 = $m->R_score2;
             }
             $liste[] = array('tour' => $m->R_tour,
-                'display' => $this->tourToString($m->R_tour),
+                'display' => $this->_tourToString($m->R_tour),
                 'equipe1' => $e_e1,
                 'nom1' => $n_e1[0]->E_nom,
                 'joueurs1' => $j_e1,
@@ -160,6 +167,7 @@ class Tournoi extends CI_Controller {
             );
         }
         $data['rencontre'] = $liste;
+        
         $rencontres = $this->Rencontre->get_rencontres_jouees_consol();
         $liste = array();
         foreach ($rencontres as $m) {
@@ -183,7 +191,7 @@ class Tournoi extends CI_Controller {
                 $s_e1 = $m->R_score2;
             }
             $liste[] = array('tour' => $m->R_tour,
-                'display' => $this->tourToString($m->R_tour),
+                'display' => $this->_tourToString($m->R_tour),
                 'equipe1' => $e_e1,
                 'nom1' => $n_e1[0]->E_nom,
                 'joueurs1' => $j_e1,
@@ -200,14 +208,8 @@ class Tournoi extends CI_Controller {
         $this->load->view('template/footer');
     }
 
-    public function les_rencontres_suite() {
-        $data['joues'] = $this->Rencontre->get_rencontres_jouees();
-        $data['joues_consol'] = $this->Rencontre->get_rencontres_jouees_consol();
-        $data['ajouer'] = $this->Rencontre->get_rencontres_a_jouer();
-        $data['ajouer_consol'] = $this->Rencontre->get_rencontres_a_jouer_consol();
-        $this->load->view('listes/rencontres', $data);
-    }
-
+    /* Autres informations */
+    
     public function le_reglement() {
         $this->load->view('template/header');
         $data['tournoi'] = $this->config->item('tournoi');
