@@ -1,5 +1,5 @@
 <div class="content">
-<h1>Tournoi « Pierre Petit » <?php echo $annee ?> à PES TANCA<br>
+<h1><?php echo $tournoi ?> <?php echo $annee ?> (à PES TANCA)<br>
 sur le site Georges Charpak !</h1>
 <br>
 <p>Ce tournoi organisé par ASMIN est l'occasion pour tous les permanents

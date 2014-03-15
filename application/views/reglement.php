@@ -1,5 +1,5 @@
 <div class="content">
-<h1>Règlement du tournoi</h1>
+<h1>Règlement du <?php echo $tournoi ?>, année <?php $annee ?></h1>
 
 <h2>Les équipes</h2>
 <p>Les équipes sont composées de 2 à 3 joueurs. Les matchs opposeront deux équipes avec le <b>même nombre de joueurs</b>, soit en triplette (3 joueurs), soit en doublette (2 joueurs) ou en tête-à-tête (un seul joueur).</p>

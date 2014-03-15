@@ -15,6 +15,7 @@
 
 // --------------------------------------------------------------------------
 
+$config['tournoi'] = 'Tournoi de pétanque Pierre Petit';
 $config['organisateur'] = 'Philippe Lalevée';
 $config['mail_organisateur'] = 'lalevee@emse.fr';
 $config['annee'] = '2014';
