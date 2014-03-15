@@ -208,6 +208,7 @@ class Tournoi extends CI_Controller {
     public function le_reglement() {
         $this->load->view('template/header');
         $data['tournoi'] = $this->config->item('tournoi');
+        $data['lieu'] = $this->config->item('lieu');
         $data['annee'] = $this->config->item('annee');
         $data['mail_organisateur'] = $this->config->item('mail_organisateur');
         $this->load->view('reglement', $data);

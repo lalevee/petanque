@@ -2,7 +2,7 @@
 /**
  * petanque config
  * 
- * Configuration for 'Tournoi de pétanque ASMIN'
+ * Configuration for 'Tournoi de pétanque'
  * 
  * @author		Philippe Lalevée
  * @email		lalevee@emse.fr
@@ -16,6 +16,8 @@
 // --------------------------------------------------------------------------
 
 $config['tournoi'] = 'Tournoi de pétanque Pierre Petit';
+$config['lieu'] = 'Site Georges Charpak';
+$config['association'] = 'ASMIN';
 $config['organisateur'] = 'Philippe Lalevée';
 $config['mail_organisateur'] = 'lalevee@emse.fr';
 $config['annee'] = '2014';

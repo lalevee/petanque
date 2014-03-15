@@ -7,7 +7,7 @@
 <p>En triplette, chaque joueur dispose de 2 boules. En doublette et en tête-à-tête, chaque joueur dispose de 3 boules.</p>
 
 <h2>Aires de jeu et parties</h2>
-<p>Les parties se dérouleront sur tout terrain utilisable sur le site Georges Charpak. Celui-ci devra être de largeur et longueur suffisante (l'idéal est 4m x 15m).</p>
+<p>Les parties se dérouleront sur tout terrain utilisable sur le <? echo $lieu ?>. Celui-ci devra être de largeur et longueur suffisante (l'idéal est 4m x 15m).</p>
 
 <p>Une partie se déroule en 13 points.</p>
 
