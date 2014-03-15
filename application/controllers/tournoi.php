@@ -25,6 +25,7 @@ class Tournoi extends CI_Controller {
         $data['lieu']              = $this->config->item('lieu');
         $data['association']       = $this->config->item('association');
         $data['mail_organisateur'] = $this->config->item('mail_organisateur');
+        $data['etat']              = $this->Configuration->get_etat();
         $this->load->view('accueil', $data);
     }
 
