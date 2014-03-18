@@ -55,6 +55,12 @@
         <input type="text" name="bureau" value="<?php echo set_value('bureau'); ?>" />
         <?php echo form_error('bureau'); ?><br /><br />
 
+	Constitution d'équipe : cochez une des cases suivantes<br />
+	<input type="radio" name="equipe" value="equipe" /> Je constitue
+	mon équipe<br /
+	<input type="radio" name="equipe" value="tirage" /> Je souhaite
+	être placé dans une équipe par tirage au sort<br />
+
         <input type="submit" name="inscription" value="S'inscrire" />
     </form>
 

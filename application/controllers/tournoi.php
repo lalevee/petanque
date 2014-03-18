@@ -61,8 +61,7 @@ class Tournoi extends CI_Controller {
             $this->load->view('template/footer');
         } else {
             $this->Joueur->insert_joueur();
-            $data = array('J_prenom' => $this->input->post('prenom'),
-                'J_nom' => $this->input->post('nom'));
+            $data = array('J_prenom' => $this->input->post('prenom'), 'J_nom' => $this->input->post('nom'), 'J_equipe' ==> $this->input->post('equipe'));
             $this->load->view('template/header');
             $this->load->view('inscription/inscrit', $data);
             $this->load->view('template/footer');
