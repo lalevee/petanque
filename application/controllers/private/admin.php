@@ -16,6 +16,17 @@ class Admin extends CI_Controller {
 
     /* Gestion de la configuration */
 
+    public function initialiser() {
+        $this->load->view('private/initconfig');
+    }
+
+    public function valider_initconfig() {
+        $this->form_validation->set_rules('user1', 'Joueur 1', 'required|xss_clean');
+        if ($this->form_validation->run() == FALSE) {
+            $this->load->view('private/initconfig');
+        }
+    }
+
     public function config() {
         $data['config'] = $this->Configuration->get_config();
         $this->load->view('private/config', $data);
