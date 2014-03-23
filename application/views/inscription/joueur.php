@@ -38,8 +38,8 @@
         Service<br />
         <select name="service">
             <option value="BEL"   <?echo set_select('service', 'BEL') ?> >BEL</option>
-            <option value="CMP"   <?echo set_select('service', 'CMP',   TRUE) ?> >CMP</option>
-            <option value="DRI"  <?echo set_select('service', 'DID') ?> >DRI</option>
+            <option value="CMP"   <?echo set_select('service', 'CMP', TRUE) ?> >CMP</option>
+            <option value="DRI"   <?echo set_select('service', 'DID') ?> >DRI</option>
             <option value="DFG"   <?echo set_select('service', 'DFG') ?> >DFG</option>
             <option value="DSI"   <?echo set_select('service', 'DSI') ?> >DSI</option>
             <option value="EPRD"  <?echo set_select('service', 'EPRD') ?> >EPRD </option>
@@ -55,11 +55,11 @@
         <input type="text" name="bureau" value="<?php echo set_value('bureau'); ?>" />
         <?php echo form_error('bureau'); ?><br /><br />
 
-	Constitution d'équipe : cochez une des cases suivantes<br />
-	<input type="radio" name="equipe" value="equipe" /> Je constitue
-	mon équipe<br /
-	<input type="radio" name="equipe" value="tirage" /> Je souhaite
-	être placé dans une équipe par tirage au sort<br />
+	Constitution d'équipe : choisissez une des options suivantes<br />
+	<input type="radio" name="equipe" value="equipe" />
+            Je constitue mon équipe<br />
+	<input type="radio" name="equipe" value="tirage" />
+            Je souhaite	être placé(e) dans une équipe par tirage au sort<br />
 
         <input type="submit" name="inscription" value="S'inscrire" />
     </form>

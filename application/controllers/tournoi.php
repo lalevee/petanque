@@ -19,7 +19,7 @@ class Tournoi extends CI_Controller {
     }
 
     /* Gestion de la page d'accueil par défaut */
-    
+
     public function index() {
         $this->load->view('template/header');
         $this->accueil();
@@ -27,18 +27,18 @@ class Tournoi extends CI_Controller {
     }
 
     public function accueil() {
-        $data['tournoi']           = $this->config->item('tournoi');
-        $data['annee']             = $this->config->item('annee');
-        $data['organisateur']      = $this->config->item('organisateur');
-        $data['lieu']              = $this->config->item('lieu');
-        $data['association']       = $this->config->item('association');
+        $data['tournoi'] = $this->config->item('tournoi');
+        $data['annee'] = $this->config->item('annee');
+        $data['organisateur'] = $this->config->item('organisateur');
+        $data['lieu'] = $this->config->item('lieu');
+        $data['association'] = $this->config->item('association');
         $data['mail_organisateur'] = $this->config->item('mail_organisateur');
-        $data['etat']              = $this->Configuration->get_etat();
+        $data['etat'] = $this->Configuration->get_etat();
         $this->load->view('accueil', $data);
     }
 
     /* Gestion des inscriptions */
-    
+
     public function inscription() {
         $data['closed'] = $this->Configuration->inscription_closed();
         $data['etat'] = $this->Configuration->get_etat();
@@ -61,13 +61,15 @@ class Tournoi extends CI_Controller {
             $this->load->view('template/footer');
         } else {
             $this->Joueur->insert_joueur();
-            $data = array('J_prenom' => $this->input->post('prenom'), 'J_nom' => $this->input->post('nom'), 'J_equipe' ==> $this->input->post('equipe'));
+            $data = array('J_prenom' => $this->input->post('prenom'),
+                          'J_nom'    => $this->input->post('nom'),
+                          'J_equipe' => $this->input->post('equipe'));
             $this->load->view('template/header');
             $this->load->view('inscription/inscrit', $data);
             $this->load->view('template/footer');
         }
     }
-    
+
     /* Affichage des listes */
 
     public function les_joueurs() {
@@ -108,7 +110,7 @@ class Tournoi extends CI_Controller {
             $data['date_tour'] = $tmp[$tour];
         } else
             $data['date_tour'] = '20 juin';
-        
+
         $rencontres = $this->Rencontre->get_rencontres_a_jouer_consol();
         $liste = array();
         foreach ($rencontres as $m) {
@@ -166,7 +168,7 @@ class Tournoi extends CI_Controller {
             );
         }
         $data['rencontre'] = $liste;
-        
+
         $rencontres = $this->Rencontre->get_rencontres_jouees_consol();
         $liste = array();
         foreach ($rencontres as $m) {
@@ -208,7 +210,7 @@ class Tournoi extends CI_Controller {
     }
 
     /* Autres informations */
-    
+
     public function le_reglement() {
         $this->load->view('template/header');
         $data['tournoi'] = $this->config->item('tournoi');
@@ -227,6 +229,8 @@ class Tournoi extends CI_Controller {
 
     public function archive($annee) {
         $this->load->view('template/header');
+        $data['annee'] = $annee;
+        $this->load->view('archive', $data);
         $this->load->view('template/footer');
     }
 

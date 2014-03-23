@@ -77,7 +77,7 @@ class Joueur extends CI_Model {
     }
 
     function insert_joueur() {
-	if ($this->input->post('equipe') == 'tirage') $this->J_equipe = 0;
+	if ($this->input->post('equipe') == 'tirage') $this->J_equipe =  0;
 	                                         else $this->J_equipe = -1;
         $this->J_nom = $this->input->post('nom');
         $this->J_prenom = $this->input->post('prenom');
