@@ -58,7 +58,7 @@
 	Constitution d'équipe : choisissez une des options suivantes<br />
 	<input type="radio" name="equipe" value="equipe" />
             Je constitue mon équipe<br />
-	<input type="radio" name="equipe" value="tirage" />
+	<input type="radio" name="equipe" value="tirage" checked />
             Je souhaite	être placé(e) dans une équipe par tirage au sort<br />
 
         <input type="submit" name="inscription" value="S'inscrire" />
