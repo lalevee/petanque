@@ -33,8 +33,10 @@
                         echo '<td>' . $row->J_bureau . '</td>';
                         if ($row->J_equipe > 0)
                             echo '<td>' . $row->J_equipe . '</td>';
-                        else
-                            echo '<td>-</td>';
+                        else if ($row->J_equipe == 0)
+                            echo '<td>(Draw)</td>';
+			else
+			    echo '<td>(Form)</td>';
                         if ($row->J_asmin > 0)
                             echo '<td>OUI</td>';
                         else
