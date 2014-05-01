@@ -65,6 +65,17 @@ class Joueur extends CI_Model {
         return $liste;
     }
 
+    function get_choix_equipe() {
+        $this->db->select('J_mail');
+        $this->db->where('J_equipe', -1);
+        $query = $this->db->get('Joueur');
+        $joueur = $query->result();
+        foreach ($joueur as $j) {
+            $liste[] = $j->J_mail;
+        }
+        return $liste;
+    }
+    
     function get_apayer() {
         $this->db->select('J_mail');
         $this->db->where('J_asmin', 0);

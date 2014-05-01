@@ -63,6 +63,7 @@
             <li><?php echo anchor('private/admin/mail_sgc', '... à SGC') ?></li>
             <li><?php echo anchor('private/admin/mail_joueurs', '... à tous les joueurs') ?></li>
             <li><?php echo anchor('private/admin/mail_apayer', '... aux joueurs qui doivent payer...') ?></li>
+            <li><?php echo anchor('private/admin/mail_choix_equipe', '... aux joueurs ayant choisi de constituer leur équipe...') ?></li>
             <li><?php echo anchor('private/admin/mail_joueurs/TRUE', '... aux joueurs qui ont un match à jouer') ?></li>
             <li><?php echo anchor('private/admin/mail_equipe', '... aux joueurs d\'une équipe') ?></li>
           </ul>

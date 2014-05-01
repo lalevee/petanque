@@ -1,20 +1,20 @@
 <div class="content">
     <h1>Liste des équipes</h1>
     <br>
-    <ul>
-        <?php $save = NULL; ?>
-        <?php if (count($equipes) > 0): ?>
+    <p>Il y a <?php echo $count; ?> équipes inscrites actuellement au tournoi.</p>
+    <?php if ($count > 0): ?>
+        <ul>
             <?php foreach ($equipes as $row): ?>
                 <li>
                     <?php if ($row->E_active == 0): ?>
                         <?php echo '<font color="red">'; ?>
                     <?php endif; ?>
-                    <?php echo '<b>Équipe ' . $row->E_id; ?>
                     <?php if ($row->E_nom != NULL): ?>
-                        <?php echo ' (' . $row->E_nom . ')'; ?>
+                        <?php echo '<b>' . $row->E_nom . '</b> (équipe ' . $row->E_id . ')'; ?>
+                    <?php else: ?>
+                        <?php echo '<b>Équipe ' . $row->E_id . '</b>'; ?>
                     <?php endif; ?>
-                    <?php echo '</b>'; ?>
-                    <?php if ($row->E_consol == 1 || $row->E_active == 0): ?>
+                    <?php if ($row->E_active == 0): ?>
                         <?php echo '</font>'; ?>
                     <?php endif; ?>
                     <?php echo ' : '; ?>
@@ -36,8 +36,6 @@
                 </li><br>
             <?php endforeach; ?>
         </ul>
-    <?php else: ?>
-        <p>Aucune équipe enregistrée.</p>
     <?php endif; ?>
 
 </div>
