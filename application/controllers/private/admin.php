@@ -316,11 +316,11 @@ class Admin extends CI_Controller {
     public function mail_choix_equipe() {
         $data['mel'] = $this->Joueur->get_choix_equipe();
         $this->_config_mail();
-//        $this->email->to($data['mel']);
-        $this->email->to('lalevee@emse.fr');
+        $this->email->to($data['mel']);
+//        $this->email->to('lalevee@emse.fr');
         $this->email->cc('lalevee@emse.fr');
         $this->email->subject("[PETANQUE] Constitution d'équipe");
-        $this->email->message("Bonjour,\n\nLors de votre inscription, vous avez choisi de constituer votre équipe.\n\Pour inscrire cette équipe, l'un des membres doit répondre à ce message, en donnant les noms des membres et le nom de l'équipe.\n\nMerci d'avance.\n\nLes organisateurs.\n");
+        $this->email->message("Bonjour,\n\nLors de votre inscription, vous avez choisi de constituer votre équipe.\n\nPour inscrire cette équipe, l'un des membres doit répondre à ce message, en donnant les noms des membres et le nom de l'équipe.\n\nMerci d'avance.\n\nLes organisateurs.\n");
 
         if ($this->email->send()) {
             $data['msg'] = "your email has now been sent.";

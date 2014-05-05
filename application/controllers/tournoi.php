@@ -82,6 +82,7 @@ class Tournoi extends CI_Controller {
 
     public function les_equipes() {
         $data['equipes'] = $this->Equipe->get_vue_equipes();
+        $data['count'] = count($data['equipes']);
         $this->load->view('template/header');
         $this->load->view('listes/equipes', $data);
         $this->load->view('template/footer');
@@ -109,7 +110,7 @@ class Tournoi extends CI_Controller {
             $tmp = $this->config->item('dates');
             $data['date_tour'] = $tmp[$tour];
         } else
-            $data['date_tour'] = '20 juin';
+            $data['date_tour'] = '0000';
 
         $rencontres = $this->Rencontre->get_rencontres_a_jouer_consol();
         $liste = array();

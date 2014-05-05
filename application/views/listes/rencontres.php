@@ -2,9 +2,12 @@
     <h1>Les matchs à jouer</h1>
 
     <br>
-    <p>Le tournoi est terminé.</p>
-    <?php if (1 == 2): ?>
-        <p>Ces matchs doivent avoir lieu <b>avant le <?php echo $date_tour; ?></b> !</p>
+    <?php if (1 == 1): ?>
+	<?php if ($date_tour == '000'): ?>
+	    <p>Les matchs vont bientôt être prévus...</p>
+	<?php else: ?>
+            <p>Ces matchs doivent avoir lieu <b>avant le <?php echo $date_tour; ?></b> !</p>
+        <?php endif; ?>
 
         <h2>Matchs du tournoi</h2>
 

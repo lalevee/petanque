@@ -19,6 +19,8 @@
         <h2>Inscription</h2>
         <p>La phase d'inscription est démarrée.</p>
 
+	<p>Début du tournoi début mai.</p>
+
     <?php else: ?>
         <h2>Message de lancement</h2>
 
