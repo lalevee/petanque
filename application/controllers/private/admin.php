@@ -230,7 +230,7 @@ class Admin extends CI_Controller {
 
     private function _config_mail() {
         $config['charset'] = 'utf-8';
-        $config['mailtype'] = 'html';
+        // $config['mailtype'] = 'html';
         $this->email->initialize($config);
         $this->email->set_newline("<br />");
         $this->email->from('noreply@emse.fr', 'Organisateur du tournoi');
