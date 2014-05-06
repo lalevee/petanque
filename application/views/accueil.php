@@ -22,7 +22,10 @@
 	<p>Début du tournoi début mai.</p>
 
     <?php else: ?>
-        <h2>Message de lancement</h2>
+        <h2>Tournoi</h2>
+        <p>La phase d'inscription est maintenant close.</p>
+	<p>Les équipes seront tirées au sort le mercredi 7 mai à 13h,
+	ainsi que le tableau des matches.</p>
 
     <?php endif; ?>
 
