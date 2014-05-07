@@ -40,7 +40,7 @@ class Admin extends CI_Controller {
     }
 
     public function tirage_equipe() {
-        $data['query'] = $this->Joueur->get_joueurs();
+        $data['query'] = $this->Joueur->get_joueurs_a_equiper();
         $data['count'] = count($data['query']);
         $this->load->view('private/tirage_equipe', $data);
     }

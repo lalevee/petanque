@@ -54,6 +54,30 @@
                 <td align="center"><font size="+2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></td>
             </tr>
         </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
+    <h1>Saisie du tableau</h1>
+    <br>
+    <table border="1" cellpadding="10" >
+      <tr><td align="center"><font size="+2"><b>Rang</b></td><td
+      align="center"><font
+      size="+2"><b>Équipe</b></td></tr>
+      <?php for ($i=1; $i<17; $i++) {
+         echo '<tr>';
+         echo '<td align="center"><font size="+2"><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' . $i .  '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></font></td>';
+	 echo '<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>';
+	 echo '</tr>';
+    }  ?>
+    </table>
     </body>
 </html>

@@ -26,6 +26,13 @@ class Joueur extends CI_Model {
         return $query->result();
     }
 
+    function get_joueurs_a_equiper() {
+        $this->db->where('J_equipe', 0);
+        $this->db->order_by('J_nom', 'asc');
+        $query = $this->db->get('Joueur');
+        return $query->result();
+    }
+
     function get_joueur($joueur) {
         $this->db->where('J_id', $joueur);
         $query = $this->db->get('Joueur');
