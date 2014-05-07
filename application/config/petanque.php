@@ -22,11 +22,11 @@ $config['organisateur'] = 'Philippe Lalevée';
 $config['mail_organisateur'] = 'lalevee@emse.fr';
 $config['annee'] = '2014';
 $config['nombre'] = '16';
-$config['dates'][0] = '3 mai';
-$config['dates'][1] = '31 mai';
-$config['dates'][2] = '14 juin';
-$config['dates'][3] = '19 juin';
-$config['dates'][4] = '20 juin';
+$config['dates'][0] = '7 mai';
+$config['dates'][1] = '30 mai';
+$config['dates'][2] = '16 juin';
+$config['dates'][3] = '29 juin';
+$config['dates'][4] = '30 juin';
 
 // --------------------------------------------------------------------------
 
