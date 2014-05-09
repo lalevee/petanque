@@ -27,6 +27,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 CREATE TABLE IF NOT EXISTS `Equipe` (
   `E_id` int(11) NOT NULL AUTO_INCREMENT,
+  `E_rang` int(11) NOT NULL,
   `E_nom` varchar(255) CHARACTER SET utf8 COLLATE utf8_roman_ci DEFAULT NULL,
   `E_active` tinyint(4) NOT NULL DEFAULT '1',
   `E_consol` tinyint(4) NOT NULL DEFAULT '0',

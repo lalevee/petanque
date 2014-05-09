@@ -45,6 +45,10 @@ class Admin extends CI_Controller {
         $this->load->view('private/tirage_equipe', $data);
     }
 
+    public function tirage_tableau() {
+        $this->load->view('private/tirage_tableau');
+    }
+
     public function inscription_equipe() {
         $this->load->view('private/inscription_equipe');
     }
@@ -66,15 +70,15 @@ class Admin extends CI_Controller {
             if ($this->input->post('nom') != '-')
                 $nom_team = $this->input->post('nom');
             $data = array(
+                'e_rang' => 0,
+                'e_nom' => $nom_team,
                 'e_active' => 1,
                 'e_consol' => 0,
                 'e_nombre' => $nbjoueur,
-                'e_nom' => $this->input->post('nom'),
                 'e_j1' => $this->input->post('user1'),
                 'e_j2' => $this->input->post('user2'),
                 'e_j3' => $this->input->post('user3'),
-                'e_j4' => $this->input->post('user4'),
-                'e_nom' => $nom_team
+                'e_j4' => $this->input->post('user4')
             );
             $this->db->insert('Equipe', $data);
             $equipe = $this->Equipe->get_equipe($joueur1);
@@ -160,10 +164,8 @@ class Admin extends CI_Controller {
         $equipes = $this->Equipe->get_active_tournoi();
         $nbrencontre = count($equipes) / 2;
         for ($i = 1; $i <= $nbrencontre; $i++) {
-            if ($i == 1)
-                $e1 = current($equipes);
-            else
-                $e1 = next($equipes);
+            if ($i == 1) $e1 = current($equipes);
+            else         $e1 = next($equipes);
             $e2 = next($equipes);
             $data = array('R_joue' => 0, 'R_consol' => 0, 'R_tour' => $tour,
                 'R_e1' => $e1->E_id, 'R_score1' => 0,
@@ -174,10 +176,8 @@ class Admin extends CI_Controller {
             $equipes = $this->Equipe->get_active_consol();
             $nbrencontre = count($equipes) / 2;
             for ($i = 1; $i <= $nbrencontre; $i++) {
-                if ($i == 1)
-                    $e1 = current($equipes);
-                else
-                    $e1 = next($equipes);
+                if ($i == 1) $e1 = current($equipes);
+                else         $e1 = next($equipes);
                 $e2 = next($equipes);
                 $data = array('R_joue' => 0, 'R_consol' => 1, 'R_tour' => $tour,
                     'R_e1' => $e1->E_id, 'R_score1' => 0,

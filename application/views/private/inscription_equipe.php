@@ -26,6 +26,10 @@
         <input type="text" name="user3" value="<?php echo set_value('user3', '0'); ?>" /> 
         <?php echo form_error('user3'); ?><br />
 
+        Joueur 4<br />
+        <input type="text" name="user4" value="<?php echo set_value('user4', '0'); ?>" /> 
+        <?php echo form_error('user4'); ?><br />
+
         <input type="submit" name="inscription" value="Inscrire" />
     </form>
 
