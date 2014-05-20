@@ -7,6 +7,7 @@ class Equipe extends CI_Model {
     /* prefixe : 'E_' */
 
     var $E_id = NULL;
+    var $E_rang = 0;
     var $E_nom = NULL;
     var $E_active = 0;
     var $E_consol = 0;
@@ -64,6 +65,7 @@ class Equipe extends CI_Model {
     private function _get_actives($consol = '0') {
         $this->db->where('E_active', '1');
         $this->db->where('E_consol', $consol);
+        $this->db->order_by('E_rang', 'asc');
         $query = $this->db->get('Equipe');
         return $query->result();
     }
