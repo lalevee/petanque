@@ -28,21 +28,21 @@
                         <?php else: ?>
                             <?php echo "L'équipe " . $row['equipe1']; ?>
                         <?php endif; ?>
-                        <?php echo '</b> ( '; ?>
+                        <?php echo '</b> (&nbsp;'; ?>
                         <?php foreach ($row['joueurs1'] as $j): ?>
                             <?php echo $j->J_prenom; ?>
                         <?php endforeach; ?>
-                        <?php echo ' ) contre <b>'; ?>
+                        <?php echo '&nbsp;) contre <b>'; ?>
                         <?php if ($row['nom2'] != NULL): ?>
                             <?php echo $row['nom2']; ?>
                         <?php else: ?>
                             <?php echo "l'équipe " . $row['equipe2']; ?>
                         <?php endif; ?>
-                        <?php echo '</b> ( '; ?>
+                        <?php echo '</b> (&nbsp;'; ?>
                         <?php foreach ($row['joueurs2'] as $j): ?>
                             <?php echo $j->J_prenom; ?>
                         <?php endforeach; ?>
-                        )</li><br>
+                        <?php echo '&nbsp;)</li><br>'; ?>
                 <?php endforeach; ?>
             </ul>
 
@@ -69,21 +69,21 @@
                         <?php else: ?>
                             <?php echo "L'équipe " . $row['equipe1']; ?>
                         <?php endif; ?>
-                        <?php echo '</b> ( '; ?>
+                        <?php echo '</b> (&nbsp;'; ?>
                         <?php foreach ($row['joueurs1'] as $j): ?>
                             <?php echo $j->J_prenom; ?>
                         <?php endforeach; ?>
-                        <?php echo ' ) contre <b>'; ?>
+                        <?php echo '&nbsp;) contre <b>'; ?>
                         <?php if ($row['nom2'] != NULL): ?>
                             <?php echo $row['nom2']; ?>
                         <?php else: ?>
                             <?php echo "l'équipe " . $row['equipe2']; ?>
                         <?php endif; ?>
-                        <?php echo '</b> ( '; ?>
+                        <?php echo '</b> (&nbsp;'; ?>
                         <?php foreach ($row['joueurs2'] as $j): ?>
                             <?php echo $j->J_prenom; ?>
                         <?php endforeach; ?>
-                        )</li><br>
+                        <?php echo '&nbsp;)</li><br>'; ?>
                 <?php endforeach; ?>
             </ul>
 

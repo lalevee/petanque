@@ -17,19 +17,19 @@
                     <?php if ($row['nom1'] != NULL): ?>
                         <?php echo '"' . $row['nom1'] . '"'; ?>
                     <?php endif; ?>
-                    <?php echo '</b> ( '; ?>
+                    <?php echo '</b> (&nbsp;'; ?>
                     <?php foreach ($row['joueurs1'] as $j): ?>
                         <?php echo $j->J_prenom; ?>
                     <?php endforeach; ?>
-                    <?php echo " ) a battu <b>l'équipe " . $row['equipe2']; ?>
+                    <?php echo "&nbsp;) a battu <b>l'équipe " . $row['equipe2']; ?>
                     <?php if ($row['nom2'] != NULL): ?>
                         <?php echo '"' . $row['nom2'] . '"'; ?>
                     <?php endif; ?>
-                    <?php echo '</b> ( '; ?>
+                    <?php echo '</b> (&nbsp;'; ?>
                     <?php foreach ($row['joueurs2'] as $j): ?>
                         <?php echo $j->J_prenom; ?>
                     <?php endforeach; ?>
-                    <?php echo ') : <b><font color="blue">' . $row['score1'] . ' -
+                    <?php echo '&nbsp;) : <b><font color="blue">' . $row['score1'] . ' -
   ' . $row['score2'] . '</font></b>'; ?>
                     <?php if ($row['score2'] == 0): ?>
                         <?php echo ', <b><font color="red">FANNY !</font></b>'; ?>
@@ -60,19 +60,19 @@
                     <?php if ($row['nom1'] != NULL): ?>
                         <?php echo '"' . $row['nom1'] . '"'; ?>
                     <?php endif; ?>
-                    <?php echo '</b> ( '; ?>
+                    <?php echo '</b> (&nbsp;'; ?>
                     <?php foreach ($row['joueurs1'] as $j): ?>
                         <?php echo $j->J_prenom; ?>
                     <?php endforeach; ?>
-                    <?php echo " ) a battu <b> l'équipe " . $row['equipe2']; ?>
+                    <?php echo "&nbsp;) a battu <b> l'équipe " . $row['equipe2']; ?>
                     <?php if ($row['nom2'] != NULL): ?>
                         <?php echo '"' . $row['nom2'] . '"'; ?>
                     <?php endif; ?>
-                    <?php echo '</b> ( '; ?>
+                    <?php echo '</b> (&nbsp;'; ?>
                     <?php foreach ($row['joueurs2'] as $j): ?>
                         <?php echo $j->J_prenom; ?>
                     <?php endforeach; ?>
-                    <?php echo ') : <b><font color="blue">' . $row['score1'] . ' -
+                    <?php echo '&nbsp;) : <b><font color="blue">' . $row['score1'] . ' -
   ' . $row['score2'] . '</font></b>'; ?>
                     <?php if ($row['score2'] == 0): ?>
                         <?php echo ',<b><font color="red"> FANNY !</font></b>'; ?>
